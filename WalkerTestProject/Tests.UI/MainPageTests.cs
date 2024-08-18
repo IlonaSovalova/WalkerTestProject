@@ -20,7 +20,7 @@ public class MainPageTests: TestBase {
 
 		// fill in the form
 		await mainPage.FirstName.FillAsync(TestData.MyContact.firstName);
-		await mainPage.LastName.FillAsync(TestData.MyContact.firstName);
+		await mainPage.LastName.FillAsync(TestData.MyContact.lastName);
 		await mainPage.Email.FillAsync(TestData.MyContact.email);
 		await mainPage.Phone.FillAsync(TestData.MyContact.phone);
 		await mainPage.State.FillAsync(TestData.MyContact.state);
