@@ -1,6 +1,6 @@
 # WalkerTestProject
 
-## Contence of the Documentation folder
+## Contents of the Documentation folder
 1. Test Plan.docx
 2. Test Scenarios for UI.docx
 3. Issues.docx
