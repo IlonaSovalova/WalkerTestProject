@@ -17,5 +17,6 @@ public class SubmitConfirmationPage: BasePage {
 	public ILocator SubmissionResult => Page.GetByText("Submission Successful!");
 	public ILocator EditYourInfo => Page.Locator("a", new PageLocatorOptions{HasTextString = "here"});
 	public ILocator EditSuccess => Page.GetByText("Edit Successful!");
-	#endregion
+    public ILocator DeleteSuccess => Page.GetByText("Delete Successful!");
+    #endregion
 }

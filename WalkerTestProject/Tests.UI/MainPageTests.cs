@@ -33,7 +33,7 @@ public class MainPageTests: TestBase {
 		await Expect(submitConfirmationPage.EditYourInfo).ToBeVisibleAsync();
 		await Expect(submitConfirmationPage.SubmissionResult).ToBeVisibleAsync();
 
-		System.Threading.Thread.Sleep(3000);
+		//System.Threading.Thread.Sleep(3000);
 	}
 
     [Test]
@@ -44,7 +44,7 @@ public class MainPageTests: TestBase {
 
         // fill in the form
         await mainPage.FirstName.FillAsync(TestData.MyContact.firstName);
-        await mainPage.LastName.FillAsync(TestData.MyContact.firstName);
+        await mainPage.LastName.FillAsync(TestData.MyContact.lastName);
         await mainPage.Email.FillAsync(TestData.MyContact.email);
         await mainPage.Phone.FillAsync(TestData.MyContact.phone);
         await mainPage.State.FillAsync(TestData.MyContact.state);
@@ -55,7 +55,7 @@ public class MainPageTests: TestBase {
 		await Expect(mainPage.Submit).ToBeVisibleAsync();
 		await Expect(mainPage.ResonError).ToBeVisibleAsync();
 
-        System.Threading.Thread.Sleep(3000);
+       // System.Threading.Thread.Sleep(3000);
     }
 
     [Test]
@@ -65,7 +65,7 @@ public class MainPageTests: TestBase {
 
 		// add new
 		await mainPage.FirstName.FillAsync(TestData.MyContact.firstName);
-		await mainPage.LastName.FillAsync(TestData.MyContact.firstName);
+		await mainPage.LastName.FillAsync(TestData.MyContact.lastName);
 		await mainPage.Email.FillAsync(TestData.MyContact.email);
 		await mainPage.Phone.FillAsync(TestData.MyContact.phone);
 		await mainPage.State.FillAsync(TestData.MyContact.state);
@@ -87,6 +87,6 @@ public class MainPageTests: TestBase {
         // assertion
         await Expect(submitConfirmationPage.EditSuccess).ToBeVisibleAsync();
 
-		System.Threading.Thread.Sleep(5000);
+		//System.Threading.Thread.Sleep(5000);
 	}
 }

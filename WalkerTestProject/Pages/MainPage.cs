@@ -27,13 +27,15 @@ public class MainPage: BasePage {
 	public ILocator Reason => Page.GetByPlaceholder("Enter Reason...");
 	public ILocator Submit => Page.GetByRole(AriaRole.Button).Filter(new LocatorFilterOptions {HasTextString = "Submit"});
 	public ILocator ResonError => Page.GetByText("Reason Required");
-	#endregion
+    public ILocator DeleteLink => Page.Locator("a", new PageLocatorOptions { HasTextString = "Delete" });
 
-	#region Actions
-	/// <summary>
-	/// Opens the page.
-	/// </summary>
-	public async Task Open() {
+    #endregion
+
+    #region Actions
+    /// <summary>
+    /// Opens the page.
+    /// </summary>
+    public async Task Open() {
 		await Page.GotoAsync("https://automationtestwaui.azurewebsites.net/");
 	}
 	#endregion
